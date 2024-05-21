@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretiva v-if</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+        <!-- Interpolando o Vue -->
+
+        <!-- Diretiva v-if -->
+        <div v-if="true">
+            {{ title }}
+        </div>
+
+        <!-- showTitle é uma variável -->
+        <div v-if="showTitle">
+            {{ title }}
+        </div>
+
+        <!-- showTitle é uma variável -->
+        <div v-show="showTitle">
+            {{ title }}
+        </div>
+    </div>
+    
+    <!-- Instanciando O Vue.js -->
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    title: 'Hello World',
+                    showTitle: false,
+                };
+            },
+        }).mount('#app');
+    </script>
+
+</body>
+</html>

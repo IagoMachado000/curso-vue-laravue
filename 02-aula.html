@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretiva</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+        <!-- Interpolando o Vue -->
+
+        <!-- Diretiva -->
+        <div v-if="true">
+            {{ title }}
+        </div>
+
+        <div v-if="false">
+            {{ title }}
+        </div>
+    </div>
+    
+    <!-- Instanciando O Vue.js -->
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    title: 'Hello World',
+                };
+            },
+        }).mount('#app');
+    </script>
+
+</body>
+</html>

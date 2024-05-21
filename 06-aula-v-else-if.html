@@ -4,28 +4,23 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Diretiva v-else-if</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 </head>
 <body>
 
     <div id="app">
-        <!-- Interpolando o Vue -->
-
-        <!-- Diretiva v-if -->
-        <div v-if="true">
-            {{ title }}
+        <div v-if="level > 0 && level < 50">
+            Estudando Vue.js
         </div>
 
-        <!-- showTitle é uma variável -->
-        <div v-if="showTitle">
-            {{ title }}
+        <div v-else-if="level >= 50">
+            Decolando em Vue.js
         </div>
 
-        <!-- showTitle é uma variável -->
-        <div v-show="showTitle">
-            {{ title }}
+        <div v-else>
+            Inciando em Vue.js
         </div>
     </div>
     
@@ -34,8 +29,7 @@
         const app = Vue.createApp({
             data() {
                 return {
-                    title: 'Hello World',
-                    showTitle: false,
+                    level: 50
                 };
             },
         }).mount('#app');

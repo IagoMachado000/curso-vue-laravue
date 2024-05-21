@@ -20,3 +20,10 @@
 - Diretiva `v-show` serve para mostrar e ocultar elementos do html do DOM
 
 - Diretiva `v-if` é semelhante a `v-show` a diferença entre elas é que a diretiva `v-if` remove o elemento do DOM ao invés de aplicar um estilo `display: none`, além disso, o Vue insere um comentário no DOM no lugar do elemento `<!--v-if-->`
+
+- A diretiva `v-else` é um complemento da diretiva `v-if`, ou seja, ela funciona com a mesma lógica do `else` em qualquer linguagem
+
+- Existe também a diretiva `v-else-if` que segue a mesma lógica de qualquer linguagem de programação
+
+- Podemos usar a tag nativa `template` do html juntamente com a diretiva `v-if` quando não quisermos renderizar uma div pai
+    - A tag `<template>`é utilizada para armazenar fragmentos de conteúdo HTML que podem ser clonados e inseridos no documento, mas que não são exibidos na página até serem explicitamente adicionados ao DOM (Document Object Model) por meio de scripts JavaScript. Essa tag é muito útil para criar componentes reutilizáveis ou para gerar conteúdo dinamicamente.
