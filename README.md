@@ -27,3 +27,7 @@
 
 - Podemos usar a tag nativa `template` do html juntamente com a diretiva `v-if` quando não quisermos renderizar uma div pai
     - A tag `<template>`é utilizada para armazenar fragmentos de conteúdo HTML que podem ser clonados e inseridos no documento, mas que não são exibidos na página até serem explicitamente adicionados ao DOM (Document Object Model) por meio de scripts JavaScript. Essa tag é muito útil para criar componentes reutilizáveis ou para gerar conteúdo dinamicamente.
+
+- A diretiva `v-for` serve para criar iterações com um elemento iterável e usa a sintaxe `alias in expression` para fornecer um pseudônimo para o elemento atual a ser iterado 
+
+- A diretiva `v-bind` serve para preencher qualquer atributo das tags html e a sintaxe usada é a seguinte `v-bind:atributo='variavel'`

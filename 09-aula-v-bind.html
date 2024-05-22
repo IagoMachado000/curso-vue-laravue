@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretiva v-bind</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+        <!-- Diretiva v-bind -->
+
+        <h1>{{ title }}</h1>
+
+        <!-- :alt é a sintaxe reduzida do v-bind -->
+        <!-- Quando a variável tem o mesmo nome do atributo, podemos reduzir mais a sintaxe, usando :nomeAtributo, como no atributo :title  -->
+        <img 
+            v-bind:src="src" 
+
+            :alt="alt"
+
+            :title
+        >
+    </div>
+    
+    <!-- Instanciando O Vue.js -->
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    title: "Hello World",
+                    src: "https://via.placeholder.com/200",
+                    alt: "Vue.js - Já estou decolando",
+                    title: "Imagem decorativa"
+                };
+            },
+        }).mount('#app');
+    </script>
+
+</body>
+</html>

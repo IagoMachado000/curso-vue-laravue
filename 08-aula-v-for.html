@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretiva v-for</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+        <!-- Diretiva v-for -->
+        
+        <h1>{{ title }}</h1>
+
+        <ul>
+            <li v-for="(movie, index) in movies">
+                {{ index }} - {{ movie.name }} - {{ movie.release_day }}
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Instanciando O Vue.js -->
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                   title: 'Hello World',
+                   movies: [
+                    {name: 'Batman', release_day: '01/03/2010'},
+                    {name: 'Wolverine', release_day: '10/05/2015'},
+                    {name: 'Iron Man', release_day: '20/07/2020'},
+                   ]
+                };
+            },
+        }).mount('#app');
+    </script>
+
+</body>
+</html>
