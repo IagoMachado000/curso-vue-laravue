@@ -8,6 +8,7 @@
 - Toda diretiva no Vue é precedida por `v-`
 
 ```javascript
+
     <div v-if="true">
         {{ title }}
     </div>
@@ -15,6 +16,7 @@
     <div v-if="false">
         {{ title }}
     </div>
+    
 ```
 
 - Diretiva `v-show` serve para mostrar e ocultar elementos do html do DOM
@@ -30,4 +32,7 @@
 
 - A diretiva `v-for` serve para criar iterações com um elemento iterável e usa a sintaxe `alias in expression` para fornecer um pseudônimo para o elemento atual a ser iterado 
 
-- A diretiva `v-bind` serve para preencher qualquer atributo das tags html e a sintaxe usada é a seguinte `v-bind:atributo='variavel'`
+- A diretiva `v-bind` serve para preencher **qualquer atributo** das tags html e a sintaxe usada é a seguinte `v-bind:atributo='variavel'`
+    - `v-bind` cria uma **interligação de mão única** (one-way binding), ou seja, em um único sentido (Data -> View), de forma que qualquer alteração nos dados do componente será refletida na visualização, mas não o contrário. 
+
+- A diretiva `v-model` pode ser usada para criar **interligações de mão dupla** (two-way binding) entre os dados e elementos input, textarea e select de formulários
