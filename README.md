@@ -5,10 +5,9 @@
 
 - No contexto do Vue, diretivas são elementos que adicionamos as tags html para dar instruções a um bloco de código
 
-- Toda diretiva no Vue é precedida por `v-`
+- Toda diretiva no Vue é precedida por `v-nomeDiretiva`
 
 ```javascript
-
     <div v-if="true">
         {{ title }}
     </div>
@@ -16,7 +15,6 @@
     <div v-if="false">
         {{ title }}
     </div>
-    
 ```
 
 - Diretiva `v-show` serve para mostrar e ocultar elementos do html do DOM
