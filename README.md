@@ -34,3 +34,8 @@
     - `v-bind` cria uma **interligação de mão única** (one-way binding), ou seja, em um único sentido (Data -> View), de forma que qualquer alteração nos dados do componente será refletida na visualização, mas não o contrário. 
 
 - A diretiva `v-model` pode ser usada para criar **interligações de mão dupla** (two-way binding) entre os dados e elementos input, textarea e select de formulários
+
+- A diretiva `v-on` fica escutando um evento vindo de um elemento
+    - Capturando evento de clique `v-on:click='rotina a ser executada'`
+
+    - Temos uma sintaxe curta para usar a diretiva `v-on` onde podemos usar `@parâmetro='rotina' (@click='rotina')`
