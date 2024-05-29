@@ -18,7 +18,7 @@
     
 </head>
 <body>
-    <!-- Escutando eventos -->
+    <!-- Escutando eventos com múltiplos método -->
     <div id="app">
         <div class="container mt-5">
             <div class="mx-auto" style="width: 200px">
@@ -28,7 +28,7 @@
                     <button
                         class="btn btn-outline-secondary"
                         type="button"
-                        @click="counter -= 1"
+                        @click="removeOne"
                     >
                         -
                     </button>
@@ -36,10 +36,12 @@
                     <input v-model="counter" type="text" class="form-control text-center">
 
                     <!-- Evento de click incrementando -->
+                    <!-- Quando usamos múltiplos métodos, devemos chamar a função de fato e não só referenciar (Ref: addOne; Call: addOne()) -->
+                    <!-- E quando chamamos a função, para pegar o parâmetro event devemos declara-lo explicitamente da seguinte forma, $event ($event é uma palavra reservada do vue, qualquer variação dela nessa situação retorna undefined) -->
                     <button
                         class="btn btn-outline-secondary"
                         type="button"
-                        @click="counter += 1"
+                        @click="addOne($event), redirect(), anotherOne()"
                     >
                         +
                     </button>
@@ -55,6 +57,31 @@
                     counter: 0,
                 };
             },
+
+            // Funções
+            methods: {
+                addOne($event){
+                    console.log($event);
+
+                    this.counter += 1;
+                },
+
+                removeOne(){
+                    if(this.counter <= 0){
+                        this.counter = 0;
+                    }else{
+                        this.counter -= 1;
+                    }
+                },
+
+                redirect() {
+                    console.log('redirect');
+                },
+
+                anotherOne() {
+                    console.log('anotherOne');
+                }
+            }
         }).mount('#app');
     </script>
 </body>

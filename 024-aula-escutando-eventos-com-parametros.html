@@ -18,7 +18,7 @@
     
 </head>
 <body>
-    <!-- Escutando eventos -->
+    <!-- Passando parâmetros para os métodos -->
     <div id="app">
         <div class="container mt-5">
             <div class="mx-auto" style="width: 200px">
@@ -28,7 +28,7 @@
                     <button
                         class="btn btn-outline-secondary"
                         type="button"
-                        @click="counter -= 1"
+                        @click="remove(5)"
                     >
                         -
                     </button>
@@ -39,7 +39,7 @@
                     <button
                         class="btn btn-outline-secondary"
                         type="button"
-                        @click="counter += 1"
+                        @click="add(10)"
                     >
                         +
                     </button>
@@ -55,6 +55,21 @@
                     counter: 0,
                 };
             },
+
+            // Funções
+            methods: {
+                add(number){
+                    this.counter += number;
+                },
+
+                remove(number){
+                    if(this.counter <= 0){
+                        this.counter = 0;
+                    }else{
+                        this.counter -= number;
+                    }
+                },
+            }
         }).mount('#app');
     </script>
 </body>
