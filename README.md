@@ -39,3 +39,7 @@
     - Capturando evento de clique `v-on:click='rotina a ser executada'`
 
     - Temos uma sintaxe curta para usar a diretiva `v-on` onde podemos usar `@parâmetro='rotina' (@click='rotina')`
+
+    - Os eventos em si tem complementos que são chamados de **modificadores**, onde esses alteram o comportamento padrão do evento, alguns deles são o `.prevent - @click.prevent (preventDefault() do js), .stop - @click.stop (stopPropagation() do js), etc`
+
+    - Também podemos encadear modificadores em um evento da seguinte forma `@click.prevent.self`
